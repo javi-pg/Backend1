@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "title": "Polera nike",
+    "description": "Polera deportiva",
+    "code": "p234R43k",
+    "price": 19990,
+    "status": true,
+    "stock": 20,
+    "category": "Poleras",
+    "thumbnail": ""
+  },
+  {
+    "id": 2,
+    "title": "Buzo nike",
+    "description": "Buzo deportivo",
+    "code": "p8sdjG",
+    "price": 21990,
+    "status": true,
+    "stock": 28,
+    "category": "Pantalones",
+    "thumbnail": ""
+  }
+]
