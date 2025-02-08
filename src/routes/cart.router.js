@@ -38,11 +38,6 @@ cartRouter.post("/:cartId/product/:productId", async (req, res) => {
     const cartId = Number(req.params.cartId);
     const productId = Number(req.params.productId);
     const { quantity } = req.body; 
-
-    if (!quantity || quantity <= 0) {
-      return res.status(400).send({ message: "La cantidad debe ser mayor a 0." });
-    }
-
     const updatedCart = await cartManager.addProductInCartById(cartId, productId, quantity);
     res.status(200).send({ message: "Producto agregado al carrito.", cart: updatedCart });
   } catch (error) {

@@ -38,7 +38,7 @@ addCart= async (cart) => {
     }
   };
 //addProductInCartById
-addProductInCartById = async (cartId, productId, quantity) => {
+addProductInCartById = async (cartId, productId, quantity=1) => {
   try {
     const fileData = await fs.promises.readFile(this.pathFile, "utf-8");
     const carts = fileData ? JSON.parse(fileData) : [];
