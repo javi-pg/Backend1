@@ -5,16 +5,19 @@ constructor (pathFile){
 }
  //getProducts 
  getProducts = async () => {
-   try {
-    //leemos el archivo y guardamos su contenido 
-    const fileData = await fs.promises.readFile (this.pathFile, 'utf-8');
-    const data = JSON.parse (fileData);
+  try {
+     console.log("📂 Intentando leer el archivo:", this.pathFile);  // Nuevo console.log
 
-    return data;
-   }catch(error){
-    throw new Error(`Error al leer el archivo de productos: ${error.message}`)
+     const fileData = await fs.promises.readFile(this.pathFile, "utf-8");
+
+     const data = JSON.parse(fileData);
+
+     return data;
+  } catch (error) {
+     console.error(`❌ Error al leer el archivo de productos: ${error.message}`);
+     return [];  // array vacío en caso de error
   }
- }
+};
  //getProductsById 
  getProductsById = async (id) => {
     try {

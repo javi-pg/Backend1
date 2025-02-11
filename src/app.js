@@ -14,18 +14,18 @@ const server = http.createServer (app)
 const io = new Server (server)
 
 const PORT = 8080;
-app.use (express.static("public"));
 
 //handlebars
 app.engine ("handlebars", engine());
 app.set ("view engine", "handlebars");
 app.set ("views","./src/views");
 
+//Middlewares
+app.use (express.static("public"));
 app.use(express.json());
 
 //endpoints 
-app.get("/", (req, res) => { res.render ("home");
-  });
+
 app.get("/realtimeproducts", async (req, res) => {
     res.render("realTimeProducts");
 });

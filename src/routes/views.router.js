@@ -4,12 +4,12 @@ import ProductManager from "../ProductManager.js";
 
 const router = Router();
 const productManager = new ProductManager("./src/data/products.json");
-
-// Ruta para la vista de home
+console.log("✅ views.router.js está cargado");
+//vista de home
 router.get("/", async (req, res) => {
     try {
         const products = await productManager.getProducts();
-        console.log("Productos obtenidos en home:", products);  
+        console.log("🚀 Enviando productos a Handlebars:", products); 
         res.render("home", { products });
     } catch (error) {
         console.log("Error al obtener productos:", error);
@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
     }
 });
 
-// Ruta para la vista de productos en tiempo real
+//vista de productos en tiempo real
 router.get("/realtimeproducts", async (req, res) => {
     const products = await productManager.getProducts();
     res.render("realTimeProducts", { products });
