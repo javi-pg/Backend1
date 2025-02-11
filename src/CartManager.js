@@ -4,7 +4,7 @@ class CartManager {
     constructor(pathFile){
      this.pathFile = pathFile;
     }
-//getCartById hay que leer todo el archivo, encontrar el carrito por Id y devolver los productos que tiene dentro
+//getCartById 
 getCartById = async (id) => {
   try {
     const fileData = await fs.promises.readFile (this.pathFile, "utf-8");
@@ -20,7 +20,7 @@ getCartById = async (id) => {
     throw new Error(`Error al obtener el carrito con ID ${id}: ${error.message}`);
   }
 };
-//addCart añadir un carrito nuevo, esta vacio los productos
+//addCart añadir un carrito nuevo
 addCart= async (cart) => {
     try {
       const fileData = await fs.promises.readFile (this.pathFile, "utf-8");

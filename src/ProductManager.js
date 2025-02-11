@@ -6,7 +6,7 @@ constructor (pathFile){
  //getProducts 
  getProducts = async () => {
   try {
-     console.log("📂 Intentando leer el archivo:", this.pathFile);  // Nuevo console.log
+     console.log("📂 Intentando leer el archivo:", this.pathFile);
 
      const fileData = await fs.promises.readFile(this.pathFile, "utf-8");
 
