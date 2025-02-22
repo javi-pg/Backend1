@@ -20,5 +20,15 @@
     "stock": 28,
     "category": "Pantalones",
     "thumbnail": ""
+  },
+  {
+    "id": 3,
+    "title": "a",
+    "price": 1990,
+    "description": "polera hermosa ",
+    "code": "1234553",
+    "stock": 4,
+    "category": "Poleras",
+    "status": true
   }
 ]
